@@ -15,11 +15,13 @@ public class IngredientService {
     public IngredientService(IngredientRepository ingredientRepository){
         this.repo = ingredientRepository;
     }
-
     public ArrayList<Ingredient> getAllIngredients(){
         return (ArrayList<Ingredient>) repo.findAll();
     }
 
+    public  int getNextId(){
+        return repo.findAll().getLast().getId() + 1;
+    }
     public boolean addIngredient(Ingredient ingredient) {
         Ingredient newIngredient = repo.save(ingredient);
         ingredient.setId(newIngredient.getId());

@@ -18,6 +18,9 @@ public class InstructionService {
         return (ArrayList<Instruction>) repo.findAll();
     }
 
+    public  int getNextId(){
+        return repo.findAll().getLast().getId() + 1;
+    }
     public boolean addInstruction(Instruction instruction) {
         Instruction newInstruction = repo.save(instruction);
         instruction.setId(newInstruction.getId());

@@ -18,6 +18,10 @@ public class RecipeService {
         return (ArrayList<Recipe>) repo.findAll();
     }
 
+    public  int getNextId(){
+        return repo.findAll().getLast().getId() + 1;
+    }
+
     public boolean addRecipe(Recipe recipe) {
         Recipe newRecipe = repo.save(recipe);
         recipe.setId(newRecipe.getId());

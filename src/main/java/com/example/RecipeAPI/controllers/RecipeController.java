@@ -20,8 +20,13 @@ public class RecipeController {
 
     // Get mapping to get a list of BlogPost objects.
     @GetMapping("/get-all")
-    public List<Recipe> getAllBlogPosts() {
+    public List<Recipe> getAllRecipes() {
         return recipeService.getAllRecipes();
+    }
+
+    @GetMapping("/get-next-id")
+    public int getNextRecipeId() {
+        return recipeService.getNextId();
     }
 
     @PostMapping("/create")

@@ -26,6 +26,10 @@ public class InstructionController {
         return instructionService.getAllInstructions();
     }
 
+    @GetMapping("/get-next-id")
+    public int getNextInstructionId() {
+        return instructionService.getNextId();
+    }
     @PostMapping("/create")
     public ResponseEntity<String> createNewBlogPost(@RequestBody Instruction instruction){
             // Check if addInstruction successes or not.

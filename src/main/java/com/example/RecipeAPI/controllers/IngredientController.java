@@ -27,6 +27,10 @@ public class IngredientController {
         return ingredientService.getAllIngredients();
     }
 
+    @GetMapping("/get-next-id")
+    public int getNextIngredientId() {
+        return ingredientService.getNextId();
+    }
     @PostMapping("/create")
     public ResponseEntity<String> createNewBlogPost(@RequestBody Ingredient ingredient){
             // Check if addIngredient successes or not.
