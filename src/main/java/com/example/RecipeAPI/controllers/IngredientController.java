@@ -21,9 +21,9 @@ public class IngredientController {
         this.ingredientService = ingredientService;
     }
 
-    // Get mapping to get a list of BlogPost objects.
+    // Get mapping to get a list of Ingredient objects.
     @GetMapping("/get-all")
-    public List<Ingredient> getAllBlogPosts() {
+    public List<Ingredient> getAllIngredients() {
         return ingredientService.getAllIngredients();
     }
 
@@ -43,7 +43,7 @@ public class IngredientController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to add recipe");
     }
     @PutMapping("/edit")
-    public ResponseEntity<String> editRecipe(@RequestBody Ingredient ingredient){
+    public ResponseEntity<String> editIngredient(@RequestBody Ingredient ingredient){
         // Check if updateInstruction successes or not.
         boolean success = ingredientService.updateIngredient(ingredient);
         if(success) {
@@ -54,7 +54,7 @@ public class IngredientController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to edit ingredient");
     }
     @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteRecipeById(int id) {
+    public ResponseEntity<String> deleteIngredientById(int id) {
         // Check if deleteInstructionById successes or not.
         boolean success = ingredientService.deleteIngredientById(id);
         if (success) {

@@ -20,9 +20,9 @@ public class InstructionController {
         this.instructionService = instructionService;
     }
 
-    // Get mapping to get a list of BlogPost objects.
+    // Get mapping to get a list of Instruction objects.
     @GetMapping("/get-all")
-    public List<Instruction> getAllBlogPosts() {
+    public List<Instruction> getAllInstructions() {
         return instructionService.getAllInstructions();
     }
 
@@ -31,7 +31,7 @@ public class InstructionController {
         return instructionService.getNextId();
     }
     @PostMapping("/create")
-    public ResponseEntity<String> createNewBlogPost(@RequestBody Instruction instruction){
+    public ResponseEntity<String> createNewInstruction(@RequestBody Instruction instruction){
             // Check if addInstruction successes or not.
             boolean success = instructionService.addInstruction(instruction);
             if(success) {
@@ -42,7 +42,7 @@ public class InstructionController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to add recipe");
     }
     @PutMapping("/edit")
-    public ResponseEntity<String> editRecipe(@RequestBody Instruction instruction){
+    public ResponseEntity<String> editInstruction(@RequestBody Instruction instruction){
         // Check if updateInstruction successes or not.
         boolean success = instructionService.updateInstruction(instruction);
         if(success) {
@@ -53,7 +53,7 @@ public class InstructionController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to edit instruction");
     }
     @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteRecipeById(int id) {
+    public ResponseEntity<String> deleteInstructionById(int id) {
         // Check if deleteInstructionById successes or not.
         boolean success = instructionService.deleteInstructionById(id);
         if (success) {

@@ -18,7 +18,7 @@ public class RecipeController {
         this.recipeService = recipeService;
     }
 
-    // Get mapping to get a list of BlogPost objects.
+    // Get mapping to get a list of Recipe objects.
     @GetMapping("/get-all")
     public List<Recipe> getAllRecipes() {
         return recipeService.getAllRecipes();
