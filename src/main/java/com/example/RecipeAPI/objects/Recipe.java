@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -39,13 +37,3 @@ public class Recipe {
         this.bakingOrCooking = bakingOrCooking;
     }
 }
-/*
-*
-* @ManyToOne
-    @JoinColumn(name = "ingredient_id")
-    private Ingredient ingredients;
-    @ManyToOne
-    @JoinColumn(name = "instruction_id")
-    private Instruction instructions;
-    *
-    * */

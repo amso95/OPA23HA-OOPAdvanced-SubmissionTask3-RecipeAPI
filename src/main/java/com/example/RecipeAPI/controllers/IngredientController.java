@@ -1,10 +1,7 @@
 package com.example.RecipeAPI.controllers;
 
 import com.example.RecipeAPI.objects.Ingredient;
-import com.example.RecipeAPI.objects.Instruction;
-import com.example.RecipeAPI.repositories.IngredientRepository;
 import com.example.RecipeAPI.services.IngredientService;
-import com.example.RecipeAPI.services.InstructionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

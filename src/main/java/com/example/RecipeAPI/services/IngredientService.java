@@ -1,9 +1,7 @@
 package com.example.RecipeAPI.services;
 
 import com.example.RecipeAPI.objects.Ingredient;
-import com.example.RecipeAPI.objects.Instruction;
 import com.example.RecipeAPI.repositories.IngredientRepository;
-import com.example.RecipeAPI.repositories.InstructionRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
